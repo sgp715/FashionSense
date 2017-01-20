@@ -1,0 +1,9 @@
+[submodule "FashionSense_Front"]
+	path = FashionSense_Front
+	url = https://github.com/sgp715/FashionSense_Front.git
+[submodule "FashionSense_ML"]
+	path = FashionSense_ML
+	url = https://github.com/RheeJ/FashionSense_ML.git
+[submodule "FashionSense_WebApp"]
+	path = FashionSense_WebApp
+	url = https://github.com/RheeJ/FashionSense_WebApp.git
