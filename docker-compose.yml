@@ -2,16 +2,23 @@ version: '2'
 
 services:
     front:
-        build: ./front
+        build: ./FashionSense_Front
         container_name: front
-        image: front
+        image: front_image
         links:
-            - api
+            - webapp
+            - ml
         ports:
             - "80:80"
-    api:
-        build: ./api
-        container_name: api
-        image: api
+    webapp:
+        build: ./FashionSense_WebApp
+        container_name: webapp
+        image: webapp_image
         expose:
             - "8080"
+    ml:
+        build: ./FashionSense_ML
+        container_name: ml
+        image: ml_image
+        expose:
+            - "5000"
