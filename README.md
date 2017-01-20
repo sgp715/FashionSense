@@ -23,3 +23,23 @@ $ docker-compose build
 ```
 $ docker-compose up
 ```
+* if you want to update from the submodules you need to follow these steps
+
+    * first cd into that submodule directory
+    * next checkout a branch
+    ```
+    $ git checkout [branch]
+    ```
+    * and set yourself to update remotes
+    ```
+    $ git submodule update --remote --merge
+    ```
+* if you simply are behind and want to update your module, go inside the submodule and run
+```
+$ git fetch
+$ git merge [repo/branch]
+```
+* to update all submodules to point to most recent
+```
+$ git submodule foreach git pull origin master
+```
