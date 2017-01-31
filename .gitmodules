@@ -7,6 +7,3 @@
 [submodule "FashionSense_WebApp"]
 	path = FashionSense_WebApp
 	url = https://github.com/RheeJ/FashionSense_WebApp.git
-[submodule "binary_classifier_CNN"]
-	path = binary_classifier_CNN
-	url = https://github.com/sgp715/binary_classifier_CNN.git
