@@ -7,6 +7,7 @@ services:
         image: api_image
         volumes:
             - ./FashionSense_WebApp:/app
+            - /tmp
         expose:
             - "8080"
         restart: always
@@ -19,6 +20,8 @@ services:
         expose:
             - "5000"
         restart: always
+        volumes_from:
+            - api
     front:
         build: ./FashionSense_Front
         container_name: front
