@@ -7,3 +7,6 @@
 [submodule "FashionSense_WebApp"]
 	path = FashionSense_WebApp
 	url = https://github.com/RheeJ/FashionSense_WebApp.git
+[submodule "FashionSense_Docs"]
+	path = FashionSense_Docs
+	url = https://github.com/sgp715/FashionSense_Docs.git

@@ -1,16 +1,13 @@
 version: '2'
 
 services:
-    # api:
-    #     build: ./FashionSense_WebApp
-    #     container_name: api
-    #     image: api_image
-    #     volumes:
-    #         - ./FashionSense_WebApp:/app
-    #         - /tmp
-    #     expose:
-    #         - "8080"
-    #     restart: always
+    docs:
+        build: ./FashionSense_Docs
+        container_name: docs
+        image: docs_image
+        expose:
+            - "4567"
+        restart: always
     ml:
         build: ./FashionSense_ML
         container_name: ml
@@ -20,14 +17,12 @@ services:
         expose:
             - "5000"
         restart: always
-        # volumes_from:
-        #     - api
     front:
         build: ./FashionSense_Front
         container_name: front
         image: front_image
         links:
-            # - api
+            - docs
             - ml
         ports:
             - "80:80"
